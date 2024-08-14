@@ -1,0 +1,26 @@
+.iconRoot {
+  display: inline-block;
+  margin-top: 7px;
+}
+
+.iconTransformer {
+  position: relative;
+  height: 60px;
+  width: 60px;
+}
+
+.icon {
+  display: inline-block;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.fallbackImg {
+  margin-top: -4px;
+}

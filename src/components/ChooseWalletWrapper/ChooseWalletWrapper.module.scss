@@ -1,0 +1,70 @@
+.maxWidth {
+  :global(.uk-modal-dialog) {
+    max-width: calc(100% - 30px) !important;
+  }
+}
+
+.fullHeight {
+  height: 100vh;
+}
+
+.leftHandBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &.desktop {
+    min-height: 583px;
+  }
+}
+
+.choiceButton {
+  height: 42px;
+  gap: 0.75rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  span {
+    display: flex;
+  }
+  i {
+    font-size: 20px;
+  }
+  &:disabled span span {
+    background-color: var(--app-primary-color-half-opacity) !important;
+  }
+  &.active {
+    color: var(--app-secondary-button-disabled-text-color) !important;
+    font-weight: normal !important;
+    background-color: var(
+      --app-secondary-button-disabled-background-color
+    ) !important;
+    border-color: var(--app-secondary-button-disabled-border-color) !important;
+  }
+}
+
+.gnosisButton {
+  margin: 0 15px !important;
+}
+
+.rightHandBox {
+  border-left: var(--app-border-width) solid
+    var(--app-primary-color-8th-opacity);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .imageBox {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .leftHandBox {
+    width: 100% !important;
+  }
+  .rightHandBox {
+    display: none !important;
+  }
+}

@@ -1,0 +1,23 @@
+.modal {
+  :global(.uk-modal-dialog) {
+    max-width: calc(100% - 30px) !important;
+  }
+}
+
+.choiceButton {
+  height: 42px;
+  gap: 1rem;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    h5 {
+      color: var(--app-background-color);
+      font-weight: bold;
+    }
+  }
+}
+
+.fullHeight {
+  height: 100vh;
+}

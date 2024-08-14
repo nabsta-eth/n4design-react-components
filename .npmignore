@@ -1,0 +1,8 @@
+/.github/
+/.husky/
+/src/
+/.prettierrc
+/commitlint.config.js
+/tsconfig.json
+/webpack.config.js
+/.babelrc

@@ -1,0 +1,25 @@
+.outerBar {
+  display: block;
+  height: 0.75rem;
+  width: 6rem;
+  background-image: linear-gradient(
+    90deg,
+    var(--app-up-color-half-opacity) 0%,
+    var(--app-warning-color-half-opacity) 33.33%,
+    var(--app-orange-color-half-opacity) 66.67%,
+    var(--app-down-color-half-opacity) 100%
+  );
+  border-radius: calc(var(--app-border-radius) * 0.5);
+
+  .innerBar {
+    display: block;
+    height: 0.75rem;
+    background-color: var(--app-primary-color);
+    border-radius: calc(var(--app-border-radius) * 0.5);
+
+    &:after {
+      bottom: -2px !important;
+      width: 100%;
+    }
+  }
+}

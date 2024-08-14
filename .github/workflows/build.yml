@@ -1,0 +1,25 @@
+name: Build
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Read package.json node and npm engines version
+        uses: skjnldsv/read-package-engines-version-actions@v1.2
+        id: package-engines-versions
+      - uses: actions/setup-node@v3.2.0
+        with:
+          node-version: ${{ steps.package-engines-versions.outputs.nodeVersion }}
+          registry-url: "https://npm.pkg.github.com"
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - name: Install dependencies & build
+        run: |
+          pnpm i
+          pnpm add handle-sdk
+          pnpm build
